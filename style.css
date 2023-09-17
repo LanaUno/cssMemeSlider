@@ -1,17 +1,42 @@
+html{
+    font-size: 10px;
+}
+
 body{
     background-color: #19b3be;
 }
 .wrapper {
-	height: 481px;
-	margin: 65px auto 0;
+	height: 48.1rem;
+	margin: 6vw 6vw 0 6vw;
 	position: relative;
-	width: 900px;
+	width: 90rem;
 }
-@media (max-width:1023px) and (min-width:500px){
+@media  (max-width:1023px){
+    .wrapper{
+        height: calc(280px + (480 -280)*((100vw - 500)/(1024 - 500)));
+        width: calc(450px + (900 - 450)*((100vw - 500)/(1024 - 500)));
+       
+    }
+}
+/* @media  (max-width:930px){
+    .wrapper{
+        height: 46.02vw;
+        width: 86.02vw;
+        margin: 2.6rem auto 0;
+    }
+    }
+    @media  (max-width:860px){
+        .wrapper{
+            height: 43.6vw;
+            width: 81.39vw;
+            margin: 2.6rem auto 0;
+        }
+        }     */
+@media  (max-width:500px){
 .wrapper{
-    height: 280px;
-    width: 450px;
-    margin: 26px auto 0;
+    height: 28rem;
+    width: 45rem;
+    margin: 2.6rem 2.6rem 0;
 }
 }
 .wrapper > input {
@@ -23,39 +48,53 @@ body{
 	overflow: hidden;
 	position: relative;
 	width: inherit;
-	box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+	box-shadow: 0 0 2rem rgba(0, 0, 0, .5);
 }
-@media (max-width:1023px) and (min-width:500px){
+@media (max-width:500px){
     .slider{
         border-radius: 6%;
     }
     }
 .wrapper .controls {
 	left: 100%;
-	margin-left: -172px;
+	margin-left: -17.2rem;
 	position: absolute;
 }
-
+@media (max-width:500px){
+    .wrapper .controls {
+        margin-left: -31.5rem;
+    }
+}
 .wrapper label:after {
-	border: 2px solid #78787a;
+	border: 0.2rem solid #78787a;
 	content: " ";
 	display: block;
-	height: 12px;
-	left: -2px;
+	height: 1.2rem;
+	left: -0.2rem;
 	position: absolute;
-	top: -2px;
-	width: 12px;
+	top: -0.2rem;
+	width: 1.2rem;
 	border-radius: 50%;
 }
-/* .slides {
-	height: inherit;
-	position: absolute;
-	width: inherit;
-} */
+
 .slide1 { background-image: url(./img/346945126004790.jpg);}
 .slide2 { background-image: url(./img/346946999297981.jpg);}
 .slide3 { background-image: url(./img/346947002396955.jpg);}
 .slide4 { background-image: url(./img/756704814157974.jpg);}
+
+/* @media  (max-width:930px){
+    .slide1 { background-image: url(./img/800px/346945126004790.png);}
+    .slide2 { background-image: url(./img/800px/346946999297981.png);}
+    .slide3 { background-image: url(./img/800px/346947002396955.png);}
+    .slide4 { background-image: url(./img/800px/756704814157974.png);}
+}
+
+@media  (max-width:860px){
+    .slide1 { background-image: url(./img/700px/346945126004790.png);}
+    .slide2 { background-image: url(./img/700px/346946999297981.png);}
+    .slide3 { background-image: url(./img/700px/346947002396955.png);}
+    .slide4 { background-image: url(./img/700px/756704814157974_1.png);}
+} */
 
 @media  (max-width:500px){
 .slide1 { background-image: url(./img/346945126004790.png);}
@@ -68,10 +107,10 @@ body{
 .wrapper label {
 	cursor: pointer;
 	display: inline-block;
-	height: 12px;
-	margin: 25px 12px 0 16px;
+	height: 1.2rem;
+	margin: 2.5rem 1.2rem 0 1.6rem;
 	position: relative;
-	width: 12px;
+	width: 1.2rem;
     border-radius: 50%;
 	transition: background ease-in-out .5s;
 }
@@ -79,6 +118,7 @@ body{
 .wrapper label:hover {
     background: #ddd;
 }
+
 #slide1:checked ~ .controls label:nth-of-type(1),
 #slide2:checked ~ .controls label:nth-of-type(2),
 #slide3:checked ~ .controls label:nth-of-type(3),
@@ -103,23 +143,18 @@ body{
 	z-index: 1;
 	transform: scale(1);
 }
- /* .caption-controls{
-    display: inline-block;
-} */
-/* .caption1 {content: "?Red car";}
-.caption2 {content: "?Grey car";}
-.caption3 {content: "?Yellow car";}
-.caption4 {content: "?White car";} */
+ 
 
 .caption{ 
 color: #ddd;
 font-family: Forum;
-font-size:20px;
+font-size:2rem;
 font-style: normal;
 font-weight: 700;
-line-height: 20px; 
-letter-spacing: 0.6px;
+line-height: 2rem; 
+letter-spacing: 0.06rem;
 }
+
 .caption1{
     z-index: 0;
 }
@@ -137,13 +172,18 @@ letter-spacing: 0.6px;
     position: absolute;
     opacity: 0;
     z-index: 1;
-    margin: 20px 0 0 0px;
-    width: 200px;
-    height: 30px;
+    margin: 2rem 0 0 0;
+    width: 20rem;
+    height: 3rem;
     transform: scale(1.5);
     transition: transform ease-in-out .5s, opacity ease-in-out .5s;
 }
-
+@media(max-width:500px){
+    .caption{
+        margin: 10rem 0 0 0;
+        width: 15rem;
+    }
+}
 #slide1:checked ~ .captions > .caption1,
 #slide2:checked ~ .captions > .caption2,
 #slide3:checked ~ .captions > .caption3,
