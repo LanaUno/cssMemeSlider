@@ -7,6 +7,13 @@ body{
 	position: relative;
 	width: 900px;
 }
+@media (max-width:1023px) and (min-width:500px){
+.wrapper{
+    height: 280px;
+    width: 450px;
+    margin: 26px auto 0;
+}
+}
 .wrapper > input {
 	display: none;
 }
@@ -18,9 +25,14 @@ body{
 	width: inherit;
 	box-shadow: 0 0 20px rgba(0, 0, 0, .5);
 }
+@media (max-width:1023px) and (min-width:500px){
+    .slider{
+        border-radius: 6%;
+    }
+    }
 .wrapper .controls {
-	left: 50%;
-	margin-left: -98px;
+	left: 100%;
+	margin-left: -172px;
 	position: absolute;
 }
 
@@ -44,6 +56,14 @@ body{
 .slide2 { background-image: url(./img/346946999297981.jpg);}
 .slide3 { background-image: url(./img/346947002396955.jpg);}
 .slide4 { background-image: url(./img/756704814157974.jpg);}
+
+@media  (max-width:500px){
+.slide1 { background-image: url(./img/346945126004790.png);}
+.slide2 { background-image: url(./img/346946999297981.png);}
+.slide3 { background-image: url(./img/346947002396955.png);}
+.slide4 { background-image: url(./img/756704814157974.png);}
+    }
+
 
 .wrapper label {
 	cursor: pointer;
@@ -94,9 +114,9 @@ body{
 .caption{ 
 color: #ddd;
 font-family: Forum;
-font-size:18px;
+font-size:20px;
 font-style: normal;
-font-weight: 400;
+font-weight: 700;
 line-height: 20px; 
 letter-spacing: 0.6px;
 }
@@ -117,11 +137,11 @@ letter-spacing: 0.6px;
     position: absolute;
     opacity: 0;
     z-index: 1;
-    margin: 20px 0 0 60px;
+    margin: 20px 0 0 0px;
     width: 200px;
     height: 30px;
     transform: scale(1.5);
-    transition: transform .5s, opacity .5s;
+    transition: transform ease-in-out .5s, opacity ease-in-out .5s;
 }
 
 #slide1:checked ~ .captions > .caption1,
